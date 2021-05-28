@@ -13,8 +13,10 @@ dubbo:
     version: 1.0.0 # 自定义dubbo服务版本
   registry:
     address: zookeeper://127.0.0.1:2181/dubbo
+    #    address: zookeeper://10.1.100.20:2181?backup=10.1.100.21:2181,10.1.100.22:2181 #集群配置
     file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
   metadata-report:
     address: zookeeper://127.0.0.1:2181/dubbo # 元数据中心
+#    address: zookeeper://10.1.100.20:2181?backup=10.1.100.21:2181,10.1.100.22:2181 # 元数据中心
   scan:
     base-packages: com.wxf.dubbo.provider.service.impl # 扫描包路径
